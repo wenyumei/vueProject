@@ -92,7 +92,12 @@
     flex: 1;
   }
   .wrap div h4 {
-    text-align: left;
+    text-align: center;
+  }
+  .wrap div ul {
+    width: 50%;
+    margin:  0 auto;
+    padding: 0;
   }
   .wrap div ul li {
     text-align: left;

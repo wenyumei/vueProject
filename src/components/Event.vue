@@ -1,7 +1,7 @@
 <template>
   <div class="event">
-    <button v-on:click="addCount">add</button>
-    <button v-on:click="minusCount" :disabled="count<=0" v-bind:class="[count<=0?className:'']">minus</button>
+    <button @click="addCount">add</button>
+    <button @click="minusCount" :disabled="count<=0" :class="[count<=0?className:'']">minus</button>
     <p>点击次数: {{count}} <span v-show="count<=0"> 当前次数为0次!</span></p>
   </div>
 </template>

@@ -6,7 +6,7 @@
     </div>
     <div>
       <input type="text" placeholder="please input" v-model="msg" />
-      <button v-on:click="reverseString" :disabled="msg.length == 0">reverse</button>
+      <button @click="reverseString" :disabled="msg.length == 0">reverse</button>
       <button @click="cleanString" :disabled="msg.length == 0">clean</button>
     </div>
     <div class="tips">

@@ -1,8 +1,6 @@
 var path = require('path')
 var config = require('../config')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var glob = require('glob')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 exports.assetsPath = function (_path) {
   var assetsSubDirectory = process.env.NODE_ENV === 'production'
@@ -70,14 +68,4 @@ exports.styleLoaders = function (options) {
     })
   }
   return output
-}
-
-exports.getEntries = function (globPath) {
-  var entries = {}
-  glob.sync(globPath).forEach(function (entry) {
-    var basename = path.basename(entry, path.extname(entry), 'router.js')
-    entries[basename] = entry
-  });
-  console.log(entries)
-  return entries;
 }
