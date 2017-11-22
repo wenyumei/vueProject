@@ -18,6 +18,11 @@
     methods: {
       addCount: function () {
         this.count += 1
+        /**
+         * 在根实例注册了store选项，store实例注入到根组件下所有子组件中，所以子组件可以通过store.commit方法触发状态变更，通过store.state来获取状态
+         */
+        this.$store.commit('increment')
+        console.log(this.$store.state.count)
       },
       minusCount: function () {
         if (this.count > 0) {
@@ -34,6 +39,7 @@
   .event {
     margin-top: 50px;
   }
+
   .event button {
     font-size: 24px;
     font-weight: bolder;
@@ -41,10 +47,12 @@
     padding: 2px 10px;
     cursor: pointer;
   }
+
   span {
     font-size: 12px;
     color: #f00;
   }
+
   .minu {
     cursor: not-allowed !important;
   }
