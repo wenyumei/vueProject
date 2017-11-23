@@ -21,8 +21,9 @@
         /**
          * 在根实例注册了store选项，store实例注入到根组件下所有子组件中，所以子组件可以通过store.commit方法触发状态变更，通过store.state来获取状态
          */
-        this.$store.commit('increment')
-        console.log(this.$store.state.count)
+//        this.$store.commit('increment')
+        this.$store.commit('increment', 2)
+        console.log('当前count累计值为：' + this.$store.state.count)
       },
       minusCount: function () {
         if (this.count > 0) {
@@ -30,6 +31,15 @@
         } else {
           this.count = 0
         }
+        /**
+         *提交mutation的对象风格提交方式，包含type属性对象，当使用对象风格提交方式时，store中则需通过对象属性获取方法来获取传入参数
+         * n的值为5,则在store中mutation的increment中应为num.n
+         */
+        this.$store.commit({
+          type: 'plus',
+          n: 5
+        })
+        console.log('当前count值为：' + this.$store.state.count)
       }
     }
   }
