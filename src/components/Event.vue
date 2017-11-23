@@ -34,12 +34,19 @@
         /**
          *提交mutation的对象风格提交方式，包含type属性对象，当使用对象风格提交方式时，store中则需通过对象属性获取方法来获取传入参数
          * n的值为5,则在store中mutation的increment中应为num.n
+         * 在Vuex中，mutation是同步事务，要处理异步操作用Action
          */
         this.$store.commit({
           type: 'plus',
           n: 5
         })
-        console.log('当前count值为：' + this.$store.state.count)
+        console.log('当前count值为（mutation的对象风格提交方式）：' + this.$store.state.count)
+
+        /**
+         * Action通过store.dispatch方法触发
+         */
+        this.$store.dispatch('increment')
+        console.log('当前count累计值为（Action事例）：' + this.$store.state.count)
       }
     }
   }

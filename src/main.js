@@ -22,6 +22,8 @@ const store = new Vuex.Store({
   mutations: {
     // increment (state) {
     //   state.count++
+    // },
+
     increment (state, num) {
       state.count += num
     },
@@ -30,6 +32,11 @@ const store = new Vuex.Store({
       if (state.count < 0) {
         state.count = 0
       }
+    }
+  },
+  actions: {
+    increment (context) {
+      context.commit('increment', 2)
     }
   }
 })
