@@ -65,6 +65,15 @@
     cursor: pointer;
   }
 
+  .event button:first-child {
+    /* 自定义鼠标图片样式
+     * 图片地址最好为绝对地址（当图片不显示时，可尝试使用绝对路径或相对路径）
+     * 为防止不同浏览器对图片的兼容问题，图片格式最好为cur或ico格式
+     * 为防止图片大小不一致问题，图片尺寸推荐32*32
+    */
+    cursor: url("http://ued.taobao.com/blog/wp-content/themes/taobaoued/images/cursor.ico"), auto;
+  }
+
   span {
     font-size: 12px;
     color: #f00;
