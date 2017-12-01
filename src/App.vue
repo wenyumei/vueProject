@@ -54,6 +54,12 @@
   .btn {
     line-height: 24px;
     margin-left: 15px;
+    font-weight: 700;
+    padding: 0 15px;
+  }
+
+  .btn:hover a, .btn:active a {
+    color: #409eff;
   }
 
   .nav, .hello, .loop, .event, .routerView {

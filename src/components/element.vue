@@ -91,14 +91,37 @@
 <script>
   export default {
     data () {
+      let date = new Date()
+      let year = date.getFullYear()
+      let month = date.getMonth()
+      let days = date.getDate()
+      let hours = date.getHours()
+      let minutes = date.getMinutes()
+      let seconds = date.getSeconds()
+      month = month > 9 ? month : '0' + month
+      days = days > 9 ? days : '0' + days
+      hours = hours > 9 ? hours : '0' + hours
+      minutes = minutes > 9 ? minutes : '0' + minutes
+      seconds = seconds > 9 ? seconds : '0' + seconds
+      let dateValue = year + '-' + month + '-' + days + ' ' + hours + ':' + minutes + ':' + seconds
       const item = {
-        date: '2017-12-01',
+        date: dateValue,
         name: 'admin',
         address: '辽宁省沈阳市浑南新区远航西路3号'
       }
       return {
-        tableData: Array(20).fill(item) // 使用指定值填充数组
+        tableData: Array(1).fill(item) // 使用指定值填充数组
       }
+    },
+    mounted: function () {
+      let self = this
+      let newArr = self.tableData[0]
+      let cycle = setInterval(() => {
+        self.tableData.push(newArr)
+        if (self.tableData.length > 20) {
+          clearInterval(cycle)
+        }
+      }, 1000)
     }
   }
 </script>
