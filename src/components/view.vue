@@ -52,9 +52,7 @@
 <style>
   .routerView {
     width: 30%;
-    margin: 0 auto;
-    position: relative;
-    top: 30px;
+    margin: 50px auto;
   }
 
   ul li, .view {

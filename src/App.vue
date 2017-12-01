@@ -11,6 +11,9 @@
       <button class="btn">
         <router-link to="/view">View</router-link>
       </button>
+      <button class="btn">
+        <router-link to="/element">Element</router-link>
+      </button>
     </div>
     <router-view></router-view>
   </div>
@@ -23,6 +26,22 @@
 </script>
 
 <style>
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+  }
+
   .nav {
     width: 95%;
     height: 34px;
@@ -37,20 +56,7 @@
     margin-left: 15px;
   }
 
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  .nav, .hello, .loop, .event, .routerView {
     text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
-
-  img {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 15px;
-    top: 15px;
   }
 </style>

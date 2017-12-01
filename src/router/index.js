@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import Loop from '@/components/Loop'
-import Event from '@/components/Event'
-import View from '@/components/View'
+import Hello from '@/components/hello'
+import Loop from '@/components/loop'
+import Event from '@/components/event'
+import View from '@/components/view'
+import Element from '@/components/element'
+
 const One = {template: '<div>one</div>'}
 const Two = {template: '<div>two</div>'}
 const Three = {template: '<div>three</div>'}
@@ -13,11 +15,7 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
-    {
-      path: '',
-      name: 'Hello',
-      component: Hello
-    },
+    {path: '', component: Hello},
     {path: '/loop', component: Loop},
     {path: '/event', component: Event},
     {
@@ -41,6 +39,7 @@ export default new Router({
           }
         }
       ]
-    }
+    },
+    {path: '/element', component: Element}
   ]
 })
