@@ -36,7 +36,7 @@
         </el-submenu>
 
         <el-submenu index="3">
-          <template slot="title"><i class="el-icon-setting"></i>导航三</template>
+          <template slot="title"><i class="el-icon-share"></i>导航三</template>
           <el-menu-item-group>
             <template slot="title">分组一</template>
             <el-menu-item index="3-1">选项1</el-menu-item>
