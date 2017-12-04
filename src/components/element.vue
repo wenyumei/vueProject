@@ -118,7 +118,7 @@
       let newArr = self.tableData[0]
       let cycle = setInterval(() => {
         self.tableData.push(newArr)
-        if (self.tableData.length > 20) {
+        if (self.tableData.length > 5) {
           clearInterval(cycle)
         }
       }, 1000)
