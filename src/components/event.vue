@@ -8,7 +8,6 @@
 
 <script>
   export default {
-    name: 'event',
     data () {
       return {
         count: 0,
@@ -55,6 +54,7 @@
 <style scoped>
   .event {
     margin-top: 50px;
+    text-align: center;
   }
 
   .event button {

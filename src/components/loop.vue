@@ -49,7 +49,6 @@
 
 <script>
   export default {
-    name: 'loop',
     data () {
       return {
         products: [
