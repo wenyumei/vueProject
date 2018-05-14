@@ -68,6 +68,7 @@
 <style scoped>
   .loop {
     margin-top: 50px;
+    text-align: center;
   }
 
   .table-wrap {

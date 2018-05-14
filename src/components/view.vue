@@ -42,5 +42,6 @@
   .routerView {
     width: 30%;
     margin: 50px auto;
+    text-align: center;
   }
 </style>

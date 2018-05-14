@@ -2,7 +2,7 @@
   <div class="main">
     <router-link to="/"><img src="./assets/logo.png" title="come back to main page"/></router-link>
     <div class="nav">
-      <router-link v-for="menu in menus" :to="menu.router_path" active-class="active">
+      <router-link v-for="(menu, index) in menus" :key="index" :to="menu.router_path" active-class="active">
         <button class="btn">{{menu.name}}</button>
       </router-link>
     </div>

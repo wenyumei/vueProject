@@ -49,6 +49,10 @@
 </script>
 
 <style scoped>
+  .hello {
+    text-align: center;
+  }
+
   .string-wrap {
     width: 500px;
     margin: 0 auto;
