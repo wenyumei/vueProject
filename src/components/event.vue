@@ -52,7 +52,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .event {
     margin-top: 50px;
   }

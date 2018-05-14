@@ -1,7 +1,7 @@
 <template>
   <el-container class="el-wrap">
     <!-- 侧边栏 -->
-    <el-aside style="width: 200px; background: rgb(238, 241, 246);">
+    <el-aside>
       <el-menu>
         <el-submenu index="1">
           <template slot="title"><i class="el-icon-message"></i>导航一</template>
@@ -126,7 +126,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .el-wrap {
     height: 500px;
     border: 1px solid #eee;
@@ -134,6 +134,8 @@
   }
 
   .el-aside {
+    width: 200px !important;
+    background: rgb(238, 241, 246);
     color: #333;
   }
 

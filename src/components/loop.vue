@@ -3,11 +3,11 @@
     <div class="table-wrap">
       <table class="table table-hover">
         <thead>
-          <tr>
-            <th>名称</th>
-            <th>单价</th>
-            <th>数量</th>
-          </tr>
+        <tr>
+          <th>名称</th>
+          <th>单价</th>
+          <th>数量</th>
+        </tr>
         </thead>
         <tbody>
         <tr v-for="product in products">
@@ -66,39 +66,48 @@
   }
 </script>
 
-<style>
+<style scoped>
   .loop {
     margin-top: 50px;
   }
+
   .table-wrap {
     width: 60%;
     margin: 0 auto;
   }
+
   .table-hover {
     width: 100%;
     border: 1px solid #ddd;
     border-bottom: none;
   }
+
   .table-hover tr {
     line-height: 34px;
   }
+
   .table-hover tr th, .table-hover tr td {
     border-bottom: 1px solid #ddd;
   }
+
   .wrap {
     display: flex;
   }
+
   .wrap div {
     flex: 1;
   }
+
   .wrap div h4 {
     text-align: center;
   }
+
   .wrap div ul {
     width: 50%;
-    margin:  0 auto;
+    margin: 0 auto;
     padding: 0;
   }
+
   .wrap div ul li {
     text-align: left;
   }
